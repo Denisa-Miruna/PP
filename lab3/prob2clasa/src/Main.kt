@@ -1,6 +1,11 @@
+import java.io.File
 fun adaugaCuvant(dictionar: HashMap<String, String>,engl: String, ro: String)
 {
     dictionar.put(engl,ro)
+}
+fun salveazaPoveste(text: String, numeFisier: String)
+{
+    File(numeFisier).writeText(text)
 }
 fun main(args : Array<String>){
     val Dictionar = hashMapOf<String, String>(
@@ -48,13 +53,14 @@ fun main(args : Array<String>){
         words2.add(word.trim(',','.'))
     }
     println("\n")
+    val povesteTradusa= StringBuilder()
     println("Povestea tradusa ar suna cam asa:")
     for (item in words2){
-        if (Dictionar.contains(item))
-            print(Dictionar[item])
-        else
-            print("[$item]")
+        val translated=Dictionar[item] ?: "[$item]"
+        print(translated)
+        povesteTradusa.append(translated).append(" ")
         print(" ")
     }
+    salveazaPoveste(povesteTradusa.toString(), "PovesteTradusa.txt")
 }
 
