@@ -7,43 +7,27 @@ fun salveazaPoveste(text: String, numeFisier: String)
 {
     File(numeFisier).writeText(text)
 }
+fun citesteDictionar(numeFisier: String): HashMap<String, String>
+{
+    val dictionar=hashMapOf<String,String>()
+    File(numeFisier).forEachLine {
+        linie->
+        val cuvinte=linie.split("=")
+        if(cuvinte.size == 2)
+        {
+            val engl=cuvinte[0].trim()
+            val ro=cuvinte[1].trim()
+            dictionar.put(engl,ro)
+        }
+
+    }
+    return dictionar
+}
 fun main(args : Array<String>){
-    val Dictionar = hashMapOf<String, String>(
-        "Once" to "Odata",
-        "upon" to "ca",
-        "a" to "",
-        "time" to "niciodata",
-        "there" to "acolo",
-        "was" to "a fost",
-        "an" to "o",
-        "old" to "batrana",
-        "woman" to "femeie",
-        "who" to "care",
-        "loved" to "iubea",
-        "baking" to "sa gateasca",
-        "gingerbread" to "turta dulce",
-        "She" to "Ea",
-        "would" to "ar fi",
-        "bake" to "gatit",
-        "gingerbread" to "turta dulce",
-        "cookies" to "biscuiti",
-        "cakes" to "prajituri",
-        "houses" to "case",
-        "and" to "si",
-        "people" to "oameni",
-        "all" to "toti",
-        "decorated" to "decorati",
-        "with" to "cu",
-        "chocolate" to "ciocolata",
-        "peppermint" to "menta",
-        "caramel" to "caramel",
-        "candies" to "bomboane",
-        "colored" to "colorate",
-        "ingredients" to "ingrediente"
-    )
+    val Dictionar= citesteDictionar("cuvinteDictionar")
     adaugaCuvant(Dictionar, "people", "oameni")
     adaugaCuvant(Dictionar,"were","au fost")
-    val Poveste = "Once upon a time there were people who loved baking gingerbread. She would bake gingerbread cookies, cakes, houses and gingerbread people, all decorated with chocolate and peppermint, caramel candies and colored ingredients."
+    val Poveste = "Once upon a time there was an old woman who loved baking gingerbread. She would bake gingerbread cookies, cakes, houses and gingerbread people, all decorated with chocolate and peppermint, caramel candies and colored ingredients."
     val words1 = Poveste.split(" ")
     println("Cuvintele din poveste [${words1.count()}]:")
     for (word in words1)
