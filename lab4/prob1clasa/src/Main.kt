@@ -3,8 +3,18 @@ import kotlin.io.println
 data class Content(private var author:String,
                    private var text: String,
                    private var name: String,
-                   private var publisher:String)//constructor implicit care initializeaza el valorile parametrilor
+                   private var publisher:String,
+                    private var price: Int)
+                    //constructor implicit care initializeaza el valorile parametrilor
 {
+    fun setPrice(price :Int)
+    {
+        this.price = price
+    }
+    fun getPrice():Int
+    {
+        return this.price
+    }
     fun getAuthor(): String
     {
         return author
@@ -25,7 +35,7 @@ data class Content(private var author:String,
     {
         return name
     }
-    fun setNme(name:String)
+    fun setNUme(name:String)
     {
         this.name= name
     }
@@ -43,7 +53,7 @@ data class Book(private var data: Content)
 {
     override fun toString():String
     {
-        return "nume carte: "+ data.getName()+ " autor: "+data.getAuthor()
+        return "nume carte: "+ data.getName()+ " autor: "+data.getAuthor()+" pret: "+data.getPrice()
     }
     fun getName(): String=data.getName()
     fun getAuthor(): String= data.getAuthor()
@@ -139,7 +149,7 @@ class BooksHTML : LibraryPrinter , formatDocument{
     override fun print(books: Set<Book>) {
         printHeader()
         for (book in books) {
-            println("  <li>${book.getName()} - ${book.getAuthor()}</li>")
+            println("  <li>${book.toString()}</li>")
         }
         printFooter()
     }
@@ -154,11 +164,10 @@ class BooksJSON : LibraryPrinter , formatDocument{
     }
     override fun print(books: Set<Book>) {
         printHeader()
-        // Folosim un iterator manual sau joinToString pentru a gestiona virgulele corect
-        val content = books.joinToString(",\n") { book ->
-            "  { \"nume\": \"${book.getName()}\", \"autor\": \"${book.getAuthor()}\" }"
+
+        for (book in books) {
+            println("  { " +book.toString()+" } ")
         }
-        println(content)
         printFooter()
     }
     override fun printFooter() {
@@ -166,19 +175,19 @@ class BooksJSON : LibraryPrinter , formatDocument{
     }
 }
 fun main() {
-    val c1 = Content("Ion Creanga", "Era odata un moș...", "Amintiri", "Junimea")
+    val c1 = Content("Ion Creanga", "Era odata un moș...", "Amintiri", "Junimea", 23)
     val carte1 = Book(c1)
 
-    val c2 = Content("Mihai Eminescu", "A fost odata...", "Luceafarul", "Junimea")
+    val c2 = Content("Mihai Eminescu", "A fost odata...", "Luceafarul", "Junimea",33)
     val carte2 = Book(c2)
 
-    val c3 = Content("Mircea Eliade", "In noaptea de...", "Maitreyi", "Humanitas")
+    val c3 = Content("Mircea Eliade", "In noaptea de...", "Maitreyi", "Humanitas",20)
     val carte3 = Book(c3)
     val bibliotecaMea=Library()
     bibliotecaMea.addBook(carte1)
     bibliotecaMea.addBook(carte2)
     bibliotecaMea.addBook(carte3)
-    println("--- Toate cărțile (Format RAW) ---")
+    
     val printerRaw: LibraryPrinter = BooksRaw()
     printerRaw.print(bibliotecaMea.getBooks())
 
