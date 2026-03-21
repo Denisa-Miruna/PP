@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HTMLConverter</class>
+ <widget class="QWidget" name="HTMLConverter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>704</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>HTML Converter</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+
+   <!-- Rândul 0: câmp cale fișier + buton Browse -->
+   <item row="0" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLineEdit" name="path_line_edit">
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="placeholderText">
+        <string>/path/to/a/text/file</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="browse_btn">
+       <property name="text">
+        <string>Browse</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <!-- Rândul 1 coloana 0: zona mare de text pentru rezultatul HTML -->
+   <item row="1" column="0">
+    <widget class="QTextEdit" name="result_text_edit">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>HTML result</string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Rândul 1 coloana 1: butonul Convert to HTML -->
+   <item row="1" column="1">
+    <widget class="QPushButton" name="convert_btn">
+     <property name="text">
+      <string>Convert to HTML</string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Rândul 2 coloana 1: butonul Send to C program -->
+   <item row="2" column="1">
+    <widget class="QPushButton" name="send_btn">
+     <property name="text">
+      <string>Send to C program</string>
+     </property>
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
