@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fe7d6fb1-f226-4b3f-b736-a9aa7bc76fea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../lab6/ex2/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab3/prob2clasa/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab3/prob2clasa/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab3/prob2clasa/src/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab5/prob1clasa/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab5/prob1clasa/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab5/prob1clasa/parser1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab5/prob1clasa/parser1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab5/prob1tema/html_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab5/prob1tema/html_converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab5/prob1tema/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab5/prob1tema/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab5/prob2tema/GameWindow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab5/prob2tema/database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab5/prob2tema/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab5/prob2tema/network.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab5/prob2tema/scores.db" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Denisa-Miruna"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:Denisa-Miruna/PP.git",
+    "accountId": "a41a7ec4-00d5-48aa-ac85-8959f795a3d1"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="3CMopzlJ0BgbAYecCEFp29Gh5sl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "/home/denisa/Desktop/scoala/pp/lab1/calckotlin/src/main/kotlin/Main.kt"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe7d6fb1-f226-4b3f-b736-a9aa7bc76fea" name="Changes" comment="" />
+      <created>1776204988799</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1776204988799</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
+          <line>198</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

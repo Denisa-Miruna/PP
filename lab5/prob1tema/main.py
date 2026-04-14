@@ -7,7 +7,7 @@ from html_converter import HTMLConverter
 # Creează fereastra și pornește bucla de evenimente PyQt5.
 
 if __name__ == '__main__':
-    freeze_support()            # Necesar pe Windows pentru multiprocessing
+    freeze_support()
 
     app = QApplication(sys.argv)
     window = HTMLConverter()

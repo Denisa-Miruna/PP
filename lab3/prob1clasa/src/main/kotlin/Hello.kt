@@ -59,8 +59,3 @@ fun main(args : Array<String>){
     for (persoana in agenda){
         persoana.Print()
     }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 17c4dd212a4bca672d9b26f3ae2ef71ee2c42a5e

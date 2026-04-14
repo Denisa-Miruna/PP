@@ -3,9 +3,6 @@ import tkinter as tk
 from multiprocessing import Process, Queue
 
 
-# ============================================================
-# FUNCȚII PENTRU PROCESE - fiecare rulează într-un proces separat
-# ============================================================
 
 def task_filter_odd(message_queue):
     numbers = message_queue.get()
@@ -32,9 +29,6 @@ def task_sum(message_queue):
     message_queue.put(sum(numbers))
 
 
-# ============================================================
-# CLASA PRINCIPALĂ – Interfața grafică
-# ============================================================
 
 class Parser:
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))

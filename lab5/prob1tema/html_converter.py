@@ -6,10 +6,6 @@ from PyQt5.QtWidgets import QWidget, QApplication, QFileDialog
 from PyQt5.uic import loadUi
 
 
-# ============================================================
-# FUNCȚII PENTRU PROCESE - rulează în procese separate
-# ============================================================
-
 def task_convert_to_html(message_queue):
     """
     Citește conținutul din coadă și îl convertește în HTML.
@@ -61,9 +57,7 @@ def task_send_to_c(message_queue):
     message_queue.put(f"Salvat în: {output_path}")
 
 
-# ============================================================
-# CLASA PRINCIPALĂ – Interfața grafică PyQt5
-# ============================================================
+# Interfața grafică PyQt5
 
 class HTMLConverter(QWidget):
     ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -83,9 +77,7 @@ class HTMLConverter(QWidget):
         self.file_path = None    # Calea fișierului selectat
         self.html_result = None  # HTML-ul generat, păstrat pentru Send
 
-    # ----------------------------------------------------------
-    # METODE
-    # ----------------------------------------------------------
+
 
     def browse(self):
         """Deschide dialogul de selectare fișier .txt"""

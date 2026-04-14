@@ -1,50 +1,14 @@
-import java.io.File
-fun adaugaCuvant(dictionar: HashMap<String, String>,engl: String, ro: String)
-{
-    dictionar.put(engl,ro)
-}
-fun salveazaPoveste(text: String, numeFisier: String)
-{
-    File(numeFisier).writeText(text)
-}
-fun citesteDictionar(numeFisier: String): HashMap<String, String>
-{
-    val dictionar=hashMapOf<String,String>()
-    File(numeFisier).forEachLine {
-        linie->
-        val cuvinte=linie.split("=")
-        if(cuvinte.size == 2)
-        {
-            val engl=cuvinte[0].trim()
-            val ro=cuvinte[1].trim()
-            dictionar.put(engl,ro)
-        }
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+fun main() {
+    val name = "Kotlin"
+    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+    // to see how IntelliJ IDEA suggests fixing it.
+    println("Hello, " + name + "!")
 
+    for (i in 1..5) {
+        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
+        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
+        println("i = $i")
     }
-    return dictionar
 }
-fun main(args : Array<String>){
-    val Dictionar= citesteDictionar("cuvinteDictionar")
-    adaugaCuvant(Dictionar, "people", "oameni")
-    adaugaCuvant(Dictionar,"were","au fost")
-    val Poveste = "Once upon a time there was an old woman who loved baking gingerbread. She would bake gingerbread cookies, cakes, houses and gingerbread people, all decorated with chocolate and peppermint, caramel candies and colored ingredients."
-    val words1 = Poveste.split(" ")
-    println("Cuvintele din poveste [${words1.count()}]:")
-    for (word in words1)
-        print(word + " ")
-    val words2 = mutableListOf<String>()
-    for (word in words1){
-        words2.add(word.trim(',','.'))
-    }
-    println("\n")
-    val povesteTradusa= StringBuilder()
-    println("Povestea tradusa ar suna cam asa:")
-    for (item in words2){
-        val translated=Dictionar[item] ?: "[$item]"
-        print(translated)
-        povesteTradusa.append(translated).append(" ")
-        print(" ")
-    }
-    salveazaPoveste(povesteTradusa.toString(), "PovesteTradusa.txt")
-}
-
